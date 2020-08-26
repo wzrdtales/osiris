@@ -153,6 +153,9 @@ func (i *injector) getPodPatchOperations(
 						Path: "/healthz",
 					},
 				},
+				PeriodSeconds:    1,
+				FailureThreshold: 5,
+				SuccessThreshold: 1,
 			},
 		}
 
